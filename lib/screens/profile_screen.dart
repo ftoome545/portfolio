@@ -74,12 +74,12 @@ class ProfileScreen extends StatelessWidget {
                   )
                 ],
               ),
-              const Padding(
-                padding: EdgeInsets.all(15.0),
+              Padding(
+                padding: const EdgeInsets.all(15.0),
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.stretch,
                   children: [
-                    Text(
+                    const Text(
                       'Brief',
                       style: TextStyle(
                         fontFamily: 'PlayfairDisplay',
@@ -93,13 +93,15 @@ class ProfileScreen extends StatelessWidget {
                     Padding(
                       padding: const EdgeInsets.only(top: 15.0),
                       child: Expanded(
-                        child: Text(
-                          "More information about Fatima More information about Fatima...",
+                        child: RichText(
+                            text: const TextSpan(
+                          text:
+                              "I'm a Software Engineer, I graduated from Taif university. Interested in artificial intelligence and I love to learn new things.",
                           style: TextStyle(
-                            fontFamily: 'PlayfairDisplay',
-                            fontSize: 20,
-                          ),
-                        ),
+                              // fontFamily: 'PlayfairDisplay',
+                              fontSize: 20,
+                              color: Colors.black),
+                        )),
                       ),
                     )
                   ],
