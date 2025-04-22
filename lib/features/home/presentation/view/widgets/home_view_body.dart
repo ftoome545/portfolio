@@ -1,23 +1,16 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/core/widgets/custom_app_bar.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/adaptive_layout_widget.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/desktop_layout.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 16, vertical: 24),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-              child: Column(
-            children: [
-              CustomAppBar(),
-            ],
-          )),
-        ],
-      ),
+    return AdaptiveLayout(
+      mobileLayout: (context) => const SizedBox(),
+      tabletLayout: (context) => const SizedBox(),
+      desktopLayout: (context) => const DesktopLayout(),
     );
   }
 }

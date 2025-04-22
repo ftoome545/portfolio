@@ -11,6 +11,15 @@ abstract class AppStyles {
     );
   }
 
+  static TextStyle styleRegular18(context) {
+    return TextStyle(
+      color: const Color(0xFFC7C7C7),
+      fontSize: getResponsiveFontSize(context, fontSize: 18),
+      fontFamily: 'Manrope',
+      fontWeight: FontWeight.w400,
+    );
+  }
+
   static TextStyle styleRegular101(context) {
     return TextStyle(
       color: const Color(0xFFFFFFFF),
