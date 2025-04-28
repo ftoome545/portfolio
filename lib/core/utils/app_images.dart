@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/card_logo.png
   static const String imagesCardLogo = "assets/images/card_logo.png";
 
+  /// Assets for imagesDemoLinkIcon
+  /// assets/images/demo_link_icon.svg
+  static const String imagesDemoLinkIcon = "assets/images/demo_link_icon.svg";
+
   /// Assets for imagesFatimaLogo
   /// assets/images/FatimaLogo.jpeg
   static const String imagesFatimaLogo = "assets/images/FatimaLogo.jpeg";
@@ -25,6 +29,10 @@ class Assets {
   /// Assets for imagesGithubIcon
   /// assets/images/github_icon.svg
   static const String imagesGithubIcon = "assets/images/github_icon.svg";
+
+  /// Assets for imagesLinkIcon
+  /// assets/images/link_icon.svg
+  static const String imagesLinkIcon = "assets/images/link_icon.svg";
 
   /// Assets for imagesLinkedInIcon
   /// assets/images/linkedIn_icon.svg

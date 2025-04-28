@@ -1,0 +1,77 @@
+import 'package:flutter/material.dart';
+import 'package:practice_1/core/utils/app_styles.dart';
+import 'package:practice_1/core/widgets/contact_me.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
+
+class MobileLayout extends StatelessWidget {
+  const MobileLayout({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return CustomScrollView(
+      slivers: [
+        SliverToBoxAdapter(
+            child: Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          child: Column(
+            children: [
+              const SizedBox(
+                height: 40,
+              ),
+              Container(
+                decoration: const BoxDecoration(
+                  color: Colors.transparent,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text.rich(
+                      TextSpan(
+                        children: [
+                          TextSpan(
+                              text: 'hi, i am ',
+                              style: AppStyles.styleRegular57(context)),
+                          TextSpan(
+                              text: 'Fatima Hure.',
+                              style: AppStyles.styleRegular57(context)),
+                        ],
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Text(
+                      'A Sydney based front-end developer passionate about building accessible and user friendly websites.',
+                      style: AppStyles.styleRegular16(context),
+                    ),
+                    const SizedBox(
+                      height: 32,
+                    ),
+                    const ContactMe(),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    const DeveloperImage(height: 400),
+                  ],
+                ),
+              ),
+            ],
+          ),
+        )),
+        const SliverToBoxAdapter(
+          child: Divider(
+            height: 60,
+            color: Color(0xff484848),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: FeaturedProjects(),
+          ),
+        ),
+        ProjectDetailListView(),
+      ],
+    );
+  }
+}

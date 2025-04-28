@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/core/utils/app_colors.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
 
 class BriefInfo extends StatelessWidget {
   const BriefInfo({super.key});
@@ -46,16 +46,9 @@ class BriefInfo extends StatelessWidget {
         const SizedBox(
           width: 16,
         ),
-        Expanded(
-          child: Container(
+        const Expanded(
+          child: DeveloperImage(
             height: 663,
-            decoration: const BoxDecoration(
-              color: AppColors.secondryColor,
-              image: DecorationImage(
-                image: NetworkImage("https://placehold.co/600x663"),
-                fit: BoxFit.cover,
-              ),
-            ),
           ),
         ),
       ],

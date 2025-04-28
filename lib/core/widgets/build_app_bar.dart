@@ -16,7 +16,7 @@ AppBar buildAppBar(BuildContext context) {
           GestureDetector(
             onTap: () {},
             child: Text(
-              'Home',
+              'Work',
               style: AppStyles.styleInterMedium16(context),
             ),
           ),

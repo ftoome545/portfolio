@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/adaptive_layout_widget.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/desktop_layout.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/mobile_layout.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({super.key});
@@ -8,7 +9,7 @@ class HomeViewBody extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return AdaptiveLayout(
-      mobileLayout: (context) => const SizedBox(),
+      mobileLayout: (context) => const MobileLayout(),
       tabletLayout: (context) => const SizedBox(),
       desktopLayout: (context) => const DesktopLayout(),
     );
