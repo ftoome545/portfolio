@@ -14,5 +14,5 @@ class ProjectDetailModel {
       required this.projectYear,
       required this.projectRole,
       this.projectDemoLink = '',
-      required this.projectGitHubLink});
+      this.projectGitHubLink = ''});
 }

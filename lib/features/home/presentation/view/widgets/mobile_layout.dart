@@ -64,10 +64,13 @@ class MobileLayout extends StatelessWidget {
             color: Color(0xff484848),
           ),
         ),
-        const SliverToBoxAdapter(
+        SliverToBoxAdapter(
           child: Padding(
-            padding: EdgeInsets.symmetric(horizontal: 16),
-            child: FeaturedProjects(),
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: FeaturedProjects(
+              titleStyle: AppStyles.styleRegular43(context),
+              subTittleStyle: AppStyles.styleRegular16(context),
+            ),
           ),
         ),
         ProjectDetailListView(),

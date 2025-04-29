@@ -10,21 +10,31 @@ class ProjectDetailListView extends StatelessWidget {
   List<ProjectDetailModel> items = [
     ProjectDetailModel(
         projectImage: Assets.imagesBankDetails,
-        projectTitle: 'Blog site for World News',
+        projectTitle: 'Banking program',
         projectDescription:
             'Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in  front-end development.',
         projectYear: '2024',
         projectRole: 'Front-end Developer',
-        projectDemoLink: 'LIVE DEMO',
-        projectGitHubLink: 'projectGitHubLink'),
+        projectDemoLink: 'LIVE DEMO Link',
+        projectGitHubLink: 'GITHUB Link'),
     ProjectDetailModel(
         projectImage: Assets.imagesTravelDetails,
-        projectTitle: 'Blog site for World News',
+        projectTitle: 'Travel app',
         projectDescription:
             'Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in  front-end development.',
         projectYear: '2024',
-        projectRole: 'Front-end Developer',
-        projectGitHubLink: 'SEE ON GITHUB'),
+        projectRole: 'Flutter Developer',
+        projectDemoLink: 'LIVE DEMO Link',
+        projectGitHubLink: 'GITHUB Link'),
+    ProjectDetailModel(
+        projectImage: Assets.imagesCardDetails,
+        projectTitle: 'CV app',
+        projectDescription:
+            'Mastered CSS Grid complexities in building an innovative news homepage, navigating intricate design decisions for a seamless user experience. Leveraged the challenge to enhance skills in  front-end development.',
+        projectYear: '2024',
+        projectRole: 'Flutter Developer',
+        projectDemoLink: 'LIVE DEMO Link',
+        projectGitHubLink: 'GITHUB Link'),
   ];
   @override
   Widget build(BuildContext context) {

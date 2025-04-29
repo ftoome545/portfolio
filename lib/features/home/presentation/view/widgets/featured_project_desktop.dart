@@ -1,16 +1,15 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/core/utils/app_styles.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/features/home/data/models/project_detail_model.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/project_info.dart';
 
-class ProjectDetail extends StatelessWidget {
-  const ProjectDetail({super.key, required this.projectDetailModel});
+class FeaturedProjectDesktop extends StatelessWidget {
+  const FeaturedProjectDesktop({super.key, required this.projectDetailModel});
   final ProjectDetailModel projectDetailModel;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
+    return Row(
       children: [
         Stack(
           children: [
@@ -33,27 +32,13 @@ class ProjectDetail extends StatelessWidget {
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(16),
                   child: Image.asset(
-                    projectDetailModel.projectImage,
+                    Assets.imagesBankDetails,
                   ),
                 )),
           ],
         ),
         const SizedBox(
-          height: 40,
-        ),
-        Text(
-          projectDetailModel.projectTitle,
-          style: AppStyles.styleMedium24(context),
-        ),
-        const SizedBox(
-          height: 16,
-        ),
-        Text(
-          projectDetailModel.projectDescription,
-          style: AppStyles.styleRegular16(context),
-        ),
-        const SizedBox(
-          height: 32,
+          width: 48,
         ),
         ProjectInfo(projectDetailModel: projectDetailModel),
       ],

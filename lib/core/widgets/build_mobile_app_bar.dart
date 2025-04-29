@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:practice_1/core/utils/app_colors.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
-import 'package:practice_1/utils/app_images.dart';
 
 AppBar buildMobileAppBar(BuildContext context) {
   return AppBar(

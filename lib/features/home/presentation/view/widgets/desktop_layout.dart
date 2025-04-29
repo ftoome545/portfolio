@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/brief_info_widget.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({
@@ -8,12 +10,12 @@ class DesktopLayout extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Padding(
-      padding: EdgeInsets.symmetric(horizontal: 40, vertical: 24),
-      child: CustomScrollView(
-        slivers: [
-          SliverToBoxAdapter(
-              child: Column(
+    return CustomScrollView(
+      slivers: [
+        const SliverToBoxAdapter(
+            child: Padding(
+          padding: EdgeInsets.symmetric(horizontal: 40, vertical: 24),
+          child: Column(
             children: [
               SizedBox(
                 height: 30,
@@ -23,9 +25,25 @@ class DesktopLayout extends StatelessWidget {
                 height: 30,
               ),
             ],
-          )),
-        ],
-      ),
+          ),
+        )),
+        const SliverToBoxAdapter(
+          child: Divider(
+            height: 60,
+            color: Color(0xff484848),
+          ),
+        ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 40),
+            child: FeaturedProjects(
+              titleStyle: AppStyles.styleRegular76(context),
+              subTittleStyle: AppStyles.styleRegular18(context),
+            ),
+          ),
+        ),
+        // const SliverToBoxAdapter(child: FeaturedProjectDesktop()),
+      ],
     );
   }
 }

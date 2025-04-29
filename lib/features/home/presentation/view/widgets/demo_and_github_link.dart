@@ -8,35 +8,41 @@ class DemoAndGitHubLink extends StatelessWidget {
     super.key,
     required this.title,
     required this.icon,
+    required this.onTap,
   });
 
   final String title;
   final String icon;
+  final VoidCallback onTap;
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      crossAxisAlignment: CrossAxisAlignment.start,
-      children: [
-        Row(
-          children: [
-            Text(
-              title,
-              style: AppStyles.styleBold14(context)
-                  .copyWith(color: AppColors.primaryColor2),
-            ),
-            const SizedBox(
-              width: 4,
-            ),
-            SvgPicture.asset(icon),
-          ],
-        ),
-        Container(
-          height: 2,
-          color: AppColors.primaryColor2,
-          width: 150,
-        ),
-      ],
+    return GestureDetector(
+      onTap: () {},
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Row(
+            children: [
+              Text(
+                title,
+                style: AppStyles.styleBold14(context).copyWith(
+                  color: AppColors.primaryColor2,
+                ),
+              ),
+              const SizedBox(
+                width: 4,
+              ),
+              SvgPicture.asset(icon),
+            ],
+          ),
+          Container(
+            height: 2,
+            color: AppColors.primaryColor2,
+            width: MediaQuery.sizeOf(context).width * .25,
+          ),
+        ],
+      ),
     );
   }
 }

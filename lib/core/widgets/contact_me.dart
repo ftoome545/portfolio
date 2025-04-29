@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/svg.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
-import 'package:practice_1/utils/app_images.dart';
 
 class ContactMe extends StatelessWidget {
   const ContactMe({
