@@ -46,6 +46,10 @@ class Assets {
   /// assets/images/menu_icon.svg
   static const String imagesMenuIcon = "assets/images/menu_icon.svg";
 
+  /// Assets for imagesProfileImage
+  /// assets/images/profile_image.png
+  static const String imagesProfileImage = "assets/images/profile_image.png";
+
   /// Assets for imagesSudokuDetails
   /// assets/images/sudoku_details.png
   static const String imagesSudokuDetails = "assets/images/sudoku_details.png";

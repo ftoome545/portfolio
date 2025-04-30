@@ -15,12 +15,27 @@ class ProjectInfo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Text(
-              'Project Info',
+              projectDetailModel.projectTitle,
+              style: AppStyles.styleMedium24(context),
+            ),
+            const SizedBox(
+              height: 16,
+            ),
+            Text(
+              projectDetailModel.projectDescription,
+              style: AppStyles.styleRegular16(context),
+            ),
+            const SizedBox(
+              height: 32,
+            ),
+            Text(
+              'PROJECT INFO',
               style: AppStyles.styleSemibold16(context),
             ),
             const Divider(

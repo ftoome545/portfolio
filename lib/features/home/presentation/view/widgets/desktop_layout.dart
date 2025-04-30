@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/brief_info_widget.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
 
 class DesktopLayout extends StatelessWidget {
   const DesktopLayout({
@@ -42,7 +43,7 @@ class DesktopLayout extends StatelessWidget {
             ),
           ),
         ),
-        // const SliverToBoxAdapter(child: FeaturedProjectDesktop()),
+        const ProjectDetailListView(),
       ],
     );
   }

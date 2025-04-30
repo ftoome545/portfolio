@@ -39,7 +39,7 @@ class DemoAndGitHubLink extends StatelessWidget {
           Container(
             height: 2,
             color: AppColors.primaryColor2,
-            width: MediaQuery.sizeOf(context).width * .25,
+            width: 150,
           ),
         ],
       ),
