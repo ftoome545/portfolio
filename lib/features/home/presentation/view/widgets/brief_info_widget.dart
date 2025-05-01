@@ -8,48 +8,59 @@ class BriefInfo extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
+    return Column(
+      crossAxisAlignment: CrossAxisAlignment.start,
       children: [
-        Expanded(
-          child: Container(
-            decoration: const BoxDecoration(
-              color: Colors.transparent,
-            ),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.start,
-              children: [
-                Text.rich(
-                  TextSpan(
-                    children: [
+        const SizedBox(
+          height: 30,
+        ),
+        Row(
+          children: [
+            Expanded(
+              child: Container(
+                decoration: const BoxDecoration(
+                  color: Colors.transparent,
+                ),
+                child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Text.rich(
                       TextSpan(
-                          text: 'hi, i am ',
-                          style: AppStyles.styleRegular101(context)),
-                      TextSpan(
-                          text: 'Fatima Hure.',
-                          style: AppStyles.styleRegular101(context)),
-                    ],
-                  ),
-                  textAlign: TextAlign.left,
+                        children: [
+                          TextSpan(
+                              text: 'hi, i am ',
+                              style: AppStyles.styleRegular101(context)),
+                          TextSpan(
+                              text: 'Fatima Hure.',
+                              style: AppStyles.styleRegular101(context)),
+                        ],
+                      ),
+                      textAlign: TextAlign.left,
+                    ),
+                    Text(
+                      'A Sydney based front-end developer passionate about building accessible and user friendly websites.',
+                      style: AppStyles.styleRegular18(context),
+                    ),
+                    const SizedBox(
+                      height: 40,
+                    ),
+                    const ContactMe()
+                  ],
                 ),
-                Text(
-                  'A Sydney based front-end developer passionate about building accessible and user friendly websites.',
-                  style: AppStyles.styleRegular18(context),
-                ),
-                const SizedBox(
-                  height: 40,
-                ),
-                const ContactMe()
-              ],
+              ),
             ),
-          ),
+            const SizedBox(
+              width: 16,
+            ),
+            const Expanded(
+              child: DeveloperImage(
+                height: 663,
+              ),
+            ),
+          ],
         ),
         const SizedBox(
-          width: 16,
-        ),
-        const Expanded(
-          child: DeveloperImage(
-            height: 663,
-          ),
+          height: 30,
         ),
       ],
     );

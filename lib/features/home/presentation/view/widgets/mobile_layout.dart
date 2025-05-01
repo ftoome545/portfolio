@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/about_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
@@ -68,12 +69,33 @@ class MobileLayout extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: FeaturedProjects(
+              title: 'Featured Projects',
+              subTitle:
+                  'Here are some of the selected projects that showcase my passion for front-end development.',
               titleStyle: AppStyles.styleRegular43(context),
-              subTittleStyle: AppStyles.styleRegular16(context),
+              subTittleStyle: AppStyles.styleRegular18(context),
             ),
           ),
         ),
-        ProjectDetailListView(),
+        const ProjectDetailListView(),
+        const SliverToBoxAdapter(
+          child: Divider(
+            height: 60,
+            color: Color(0xff484848),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Padding(
+            padding: EdgeInsets.symmetric(horizontal: 16),
+            child: AboutMe(),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Divider(
+            height: 60,
+            color: Color(0xff484848),
+          ),
+        ),
       ],
     );
   }

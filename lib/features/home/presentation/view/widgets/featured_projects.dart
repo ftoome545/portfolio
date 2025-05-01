@@ -2,8 +2,13 @@ import 'package:flutter/material.dart';
 
 class FeaturedProjects extends StatelessWidget {
   const FeaturedProjects(
-      {super.key, required this.titleStyle, required this.subTittleStyle});
-
+      {super.key,
+      required this.titleStyle,
+      required this.subTittleStyle,
+      required this.title,
+      required this.subTitle});
+  final String title;
+  final String subTitle;
   final TextStyle titleStyle;
   final TextStyle subTittleStyle;
 
@@ -13,14 +18,14 @@ class FeaturedProjects extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: [
         Text(
-          'Featured Projects',
+          title,
           style: titleStyle,
         ),
         const SizedBox(
           height: 12,
         ),
         Text(
-          'Here are some of the selected projects that showcase my passion for front-end development.',
+          subTitle,
           style: subTittleStyle,
         ),
         const SizedBox(
