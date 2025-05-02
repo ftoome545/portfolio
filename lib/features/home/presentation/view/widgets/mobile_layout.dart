@@ -3,7 +3,9 @@ import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/about_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/email_form.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/let_connect.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
 
 class MobileLayout extends StatelessWidget {
@@ -96,6 +98,28 @@ class MobileLayout extends StatelessWidget {
             color: Color(0xff484848),
           ),
         ),
+        SliverToBoxAdapter(
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: Column(
+              children: [
+                const LetConnect(),
+                const SizedBox(
+                  height: 64,
+                ),
+                const EmailForm(),
+                const SizedBox(
+                  height: 80,
+                ),
+                Text("© 2025 Made by Fatima Hure",
+                    style: AppStyles.styleMedium16(context)),
+                const SizedBox(
+                  height: 64,
+                ),
+              ],
+            ),
+          ),
+        )
       ],
     );
   }

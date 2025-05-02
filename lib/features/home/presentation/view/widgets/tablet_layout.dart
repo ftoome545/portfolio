@@ -6,16 +6,9 @@ import 'package:practice_1/features/home/presentation/view/widgets/contact_secti
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
 
-class DesktopLayout extends StatefulWidget {
-  const DesktopLayout({
-    super.key,
-  });
+class TabletLayout extends StatelessWidget {
+  const TabletLayout({super.key});
 
-  @override
-  State<DesktopLayout> createState() => _DesktopLayoutState();
-}
-
-class _DesktopLayoutState extends State<DesktopLayout> {
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(

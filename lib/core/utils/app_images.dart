@@ -30,6 +30,10 @@ class Assets {
   /// assets/images/github_icon.svg
   static const String imagesGithubIcon = "assets/images/github_icon.svg";
 
+  /// Assets for imagesInstagramIcon
+  /// assets/images/instagram_icon.svg
+  static const String imagesInstagramIcon = "assets/images/instagram_icon.svg";
+
   /// Assets for imagesLinkIcon
   /// assets/images/link_icon.svg
   static const String imagesLinkIcon = "assets/images/link_icon.svg";
@@ -73,5 +77,9 @@ class Assets {
   /// Assets for imagesTravelLogo
   /// assets/images/travel_logo.png
   static const String imagesTravelLogo = "assets/images/travel_logo.png";
+
+  /// Assets for imagesXIcon
+  /// assets/images/x_icon.svg
+  static const String imagesXIcon = "assets/images/x_icon.svg";
 }
 
