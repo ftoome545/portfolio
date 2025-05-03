@@ -13,11 +13,13 @@ AppBar buildMobileAppBar(BuildContext context) {
         style: AppStyles.styleRegular32(context),
       ),
       actions: [
-        GestureDetector(
-            onTap: () {},
-            child: Padding(
-              padding: const EdgeInsets.only(right: 24),
-              child: SvgPicture.asset(Assets.imagesMenuIcon),
-            )),
+        Builder(
+          builder: (context) => IconButton(
+            icon: SvgPicture.asset(Assets.imagesMenuIcon),
+            onPressed: () {
+              Scaffold.of(context).openEndDrawer();
+            },
+          ),
+        ),
       ]);
 }
