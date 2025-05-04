@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/core/helper_functions/on_generate_routes.dart';
+import 'package:practice_1/core/services/get_it_service.dart';
 import 'package:practice_1/features/home/presentation/view/home_view.dart';
 
 Future main() async {
@@ -9,7 +10,7 @@ Future main() async {
   //   DeviceOrientation.portraitUp,
   //   DeviceOrientation.portraitDown,
   // ]);
-
+  setupGetIt();
   runApp(const MyApp());
 }
 

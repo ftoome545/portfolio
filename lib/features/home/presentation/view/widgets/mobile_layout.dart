@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/services/get_it_service.dart';
+import 'package:practice_1/core/services/scroll_service.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/about_me.dart';
@@ -68,6 +70,7 @@ class MobileLayout extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
+          key: getIt<ScrollService>().featuredProjectKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: FeaturedProjects(
@@ -86,8 +89,9 @@ class MobileLayout extends StatelessWidget {
             color: Color(0xff484848),
           ),
         ),
-        const SliverToBoxAdapter(
-          child: Padding(
+        SliverToBoxAdapter(
+          key: getIt<ScrollService>().aboutMeKey,
+          child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 16),
             child: AboutMe(),
           ),
@@ -99,6 +103,7 @@ class MobileLayout extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
+          key: getIt<ScrollService>().contactKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(

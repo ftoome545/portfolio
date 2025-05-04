@@ -91,7 +91,7 @@ class _EmailFormState extends State<EmailForm> {
             child: Padding(
               padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 19),
               child: Text(
-                'CONTACT ME',
+                'Submit',
                 style: AppStyles.styleBold16(context),
               ),
             ),

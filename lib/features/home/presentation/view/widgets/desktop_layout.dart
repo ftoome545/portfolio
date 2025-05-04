@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/services/get_it_service.dart';
+import 'package:practice_1/core/services/scroll_service.dart';
 import 'package:practice_1/core/utils/app_colors.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/brief_info_widget.dart';
@@ -32,6 +34,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
           ),
         ),
         SliverToBoxAdapter(
+          key: getIt<ScrollService>().featuredProjectKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: FeaturedProjects(
@@ -51,6 +54,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
           ),
         ),
         SliverToBoxAdapter(
+          key: getIt<ScrollService>().aboutMeKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 40),
             child: Row(
@@ -107,8 +111,9 @@ class _DesktopLayoutState extends State<DesktopLayout> {
             color: Color(0xff484848),
           ),
         ),
-        const SliverToBoxAdapter(
-          child: Padding(
+        SliverToBoxAdapter(
+          key: getIt<ScrollService>().contactKey,
+          child: const Padding(
             padding: EdgeInsets.symmetric(horizontal: 40),
             child: ContactSection(),
           ),

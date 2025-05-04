@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/services/get_it_service.dart';
+import 'package:practice_1/core/services/scroll_service.dart';
 import 'package:practice_1/core/utils/app_colors.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 
@@ -14,9 +16,12 @@ AppBar buildAppBar(BuildContext context) {
       Row(
         children: [
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              getIt<ScrollService>()
+                  .scrollTo(getIt<ScrollService>().featuredProjectKey);
+            },
             child: Text(
-              'Work',
+              'Featured Projects',
               style: AppStyles.styleInterMedium16(context),
             ),
           ),
@@ -24,7 +29,10 @@ AppBar buildAppBar(BuildContext context) {
             width: 15,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              getIt<ScrollService>()
+                  .scrollTo(getIt<ScrollService>().aboutMeKey);
+            },
             child: Text(
               'About',
               style: AppStyles.styleInterMedium16(context),
@@ -34,7 +42,10 @@ AppBar buildAppBar(BuildContext context) {
             width: 15,
           ),
           GestureDetector(
-            onTap: () {},
+            onTap: () {
+              getIt<ScrollService>()
+                  .scrollTo(getIt<ScrollService>().contactKey);
+            },
             child: Text(
               'Contact',
               style: AppStyles.styleInterMedium16(context),
