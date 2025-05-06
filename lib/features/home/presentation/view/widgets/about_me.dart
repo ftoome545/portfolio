@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:practice_1/core/utils/app_colors.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
+import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
 
 class AboutMe extends StatelessWidget {
@@ -23,22 +23,26 @@ class AboutMe extends StatelessWidget {
         const SizedBox(
           height: 24,
         ),
-        GestureDetector(
-          onTap: () {},
-          child: Container(
-            decoration: const BoxDecoration(
-                border: Border(
-                    bottom: BorderSide(
-              color: AppColors.primaryColor2,
-              width: 2.0,
-            ))),
-            child: Text(
-              'MORE ABOUT ME',
-              style: AppStyles.styleBold14(context).copyWith(
-                color: AppColors.primaryColor2,
-              ),
-            ),
-          ),
+        // GestureDetector(
+        //   onTap: () {},
+        //   child: Container(
+        //     decoration: const BoxDecoration(
+        //         border: Border(
+        //             bottom: BorderSide(
+        //       color: AppColors.primaryColor2,
+        //       width: 2.0,
+        //     ))),
+        //     child: Text(
+        //       'MORE ABOUT ME',
+        //       style: AppStyles.styleBold14(context).copyWith(
+        //         color: AppColors.primaryColor2,
+        //       ),
+        //     ),
+        //   ),
+        // ),
+        ContactMe(
+          onPressed: () {},
+          title: 'DOWNLOAD RESUME',
         ),
       ],
     );

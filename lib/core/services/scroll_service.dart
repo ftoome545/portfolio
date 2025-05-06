@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 class ScrollService {
   final featuredProjectKey = GlobalKey();
   final aboutMeKey = GlobalKey();
+  final myCapabilitiesKey = GlobalKey();
   final contactKey = GlobalKey();
 
   void scrollTo(GlobalKey key) {

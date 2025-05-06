@@ -26,9 +26,13 @@ class DemoAndGitHubLink extends StatelessWidget {
             children: [
               Text(
                 title,
-                style: AppStyles.styleBold14(context).copyWith(
-                  color: AppColors.primaryColor2,
-                ),
+                style: MediaQuery.sizeOf(context).width < 800
+                    ? AppStyles.styleBold14(context).copyWith(
+                        color: AppColors.primaryColor2,
+                      )
+                    : AppStyles.styleBold16(context).copyWith(
+                        color: AppColors.primaryColor2,
+                      ),
               ),
               const SizedBox(
                 width: 4,

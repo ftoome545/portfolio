@@ -77,32 +77,34 @@ class ProjectInfo extends StatelessWidget {
         const SizedBox(
           height: 40,
         ),
-        Row(
-          children: [
-            projectDetailModel.projectDemoLink != ''
-                ? DemoAndGitHubLink(
-                    title: 'LIVE DEMO',
-                    icon: Assets.imagesLinkIcon,
-                    onTap: () {
-                      var liveDemoLink = projectDetailModel.projectDemoLink;
-                      print(liveDemoLink);
-                    },
-                  )
-                : const SizedBox(),
-            const SizedBox(
-              width: 24,
-            ),
-            projectDetailModel.projectGitHubLink != ''
-                ? DemoAndGitHubLink(
-                    title: 'SEE ON GITHUB',
-                    icon: Assets.imagesGithubIcon,
-                    onTap: () {
-                      var gitHubLink = projectDetailModel.projectGitHubLink;
-                      print(gitHubLink);
-                    },
-                  )
-                : const SizedBox(),
-          ],
+        FittedBox(
+          child: Row(
+            children: [
+              projectDetailModel.projectDemoLink != ''
+                  ? DemoAndGitHubLink(
+                      title: 'LIVE DEMO',
+                      icon: Assets.imagesLinkIcon,
+                      onTap: () {
+                        var liveDemoLink = projectDetailModel.projectDemoLink;
+                        print(liveDemoLink);
+                      },
+                    )
+                  : const SizedBox(),
+              const SizedBox(
+                width: 24,
+              ),
+              projectDetailModel.projectGitHubLink != ''
+                  ? DemoAndGitHubLink(
+                      title: 'SEE ON GITHUB',
+                      icon: Assets.imagesGithubIcon,
+                      onTap: () {
+                        var gitHubLink = projectDetailModel.projectGitHubLink;
+                        print(gitHubLink);
+                      },
+                    )
+                  : const SizedBox(),
+            ],
+          ),
         ),
       ],
     );

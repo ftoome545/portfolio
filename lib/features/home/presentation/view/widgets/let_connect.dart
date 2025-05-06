@@ -20,76 +20,80 @@ class LetConnect extends StatelessWidget {
         const SizedBox(
           height: 16,
         ),
-        Row(
-          children: [
-            Text(
-              'Say hello at',
-              style: MediaQuery.sizeOf(context).width < 800
-                  ? AppStyles.styleRegular16(context)
-                  : AppStyles.styleRegular18(context),
-            ),
-            const SizedBox(
-              width: 3,
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                decoration: const BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColors.primaryColor2,
-                  width: 1.0,
-                ))),
-                child: Text(
-                  'fatimahure98@gmail.com',
-                  style: MediaQuery.sizeOf(context).width < 800
-                      ? AppStyles.styleRegular16(context).copyWith(
-                          color: Colors.white,
-                        )
-                      : AppStyles.styleRegular18(context).copyWith(
-                          color: Colors.white,
-                        ),
+        FittedBox(
+          child: Row(
+            children: [
+              Text(
+                'Say hello at',
+                style: MediaQuery.sizeOf(context).width < 800
+                    ? AppStyles.styleRegular16(context)
+                    : AppStyles.styleRegular18(context),
+              ),
+              const SizedBox(
+                width: 3,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: const BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                    color: AppColors.primaryColor2,
+                    width: 1.0,
+                  ))),
+                  child: Text(
+                    'fatimahure98@gmail.com',
+                    style: MediaQuery.sizeOf(context).width < 800
+                        ? AppStyles.styleRegular16(context).copyWith(
+                            color: Colors.white,
+                          )
+                        : AppStyles.styleRegular18(context).copyWith(
+                            color: Colors.white,
+                          ),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const SizedBox(
           height: 8,
         ),
-        Row(
-          children: [
-            Text(
-              "For more info, here’s my",
-              style: MediaQuery.sizeOf(context).width < 800
-                  ? AppStyles.styleRegular16(context)
-                  : AppStyles.styleRegular18(context),
-            ),
-            const SizedBox(
-              width: 3,
-            ),
-            GestureDetector(
-              onTap: () {},
-              child: Container(
-                decoration: const BoxDecoration(
-                    border: Border(
-                        bottom: BorderSide(
-                  color: AppColors.primaryColor2,
-                  width: 1.0,
-                ))),
-                child: Text(
-                  'resume',
-                  style: MediaQuery.sizeOf(context).width < 800
-                      ? AppStyles.styleRegular16(context).copyWith(
-                          color: Colors.white,
-                        )
-                      : AppStyles.styleRegular18(context).copyWith(
-                          color: Colors.white,
-                        ),
+        FittedBox(
+          child: Row(
+            children: [
+              Text(
+                "For more info, here’s my",
+                style: MediaQuery.sizeOf(context).width < 800
+                    ? AppStyles.styleRegular16(context)
+                    : AppStyles.styleRegular18(context),
+              ),
+              const SizedBox(
+                width: 3,
+              ),
+              GestureDetector(
+                onTap: () {},
+                child: Container(
+                  decoration: const BoxDecoration(
+                      border: Border(
+                          bottom: BorderSide(
+                    color: AppColors.primaryColor2,
+                    width: 1.0,
+                  ))),
+                  child: Text(
+                    'resume',
+                    style: MediaQuery.sizeOf(context).width < 800
+                        ? AppStyles.styleRegular16(context).copyWith(
+                            color: Colors.white,
+                          )
+                        : AppStyles.styleRegular18(context).copyWith(
+                            color: Colors.white,
+                          ),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
         const SizedBox(
           height: 40,

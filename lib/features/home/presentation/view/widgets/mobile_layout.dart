@@ -1,18 +1,29 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/constants.dart';
 import 'package:practice_1/core/services/get_it_service.dart';
 import 'package:practice_1/core/services/scroll_service.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
+import 'package:practice_1/features/home/data/models/skills_model.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/about_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/email_form.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/let_connect.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/project_detail_list_view.dart';
+import 'package:practice_1/features/home/presentation/view/widgets/skills.dart';
 
 class MobileLayout extends StatelessWidget {
   const MobileLayout({super.key});
 
+  static List<SkillsModel> items = [
+    SkillsModel(icon: Assets.imagesDartIcon, title: 'Dart'),
+    SkillsModel(icon: Assets.imagesFlutterIcon, title: 'Flutter'),
+    SkillsModel(icon: Assets.imagesFirebase, title: 'Firebase'),
+    SkillsModel(icon: Assets.imagesGitIcon, title: 'Git'),
+    SkillsModel(icon: Assets.imagesFigmaIcon, title: 'Figma'),
+  ];
   @override
   Widget build(BuildContext context) {
     return CustomScrollView(
@@ -52,7 +63,13 @@ class MobileLayout extends StatelessWidget {
                     const SizedBox(
                       height: 32,
                     ),
-                    const ContactMe(),
+                    ContactMe(
+                      onPressed: () {
+                        getIt<ScrollService>()
+                            .scrollTo(getIt<ScrollService>().contactKey);
+                      },
+                      title: 'CONTACT ME',
+                    ),
                     const SizedBox(
                       height: 40,
                     ),
@@ -103,10 +120,54 @@ class MobileLayout extends StatelessWidget {
           ),
         ),
         SliverToBoxAdapter(
+          key: getIt<ScrollService>().myCapabilitiesKey,
+          child: Padding(
+            padding: const EdgeInsets.symmetric(
+                horizontal: kMobileHorizintalPadding),
+            child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
+              children: [
+                Text(
+                  'MY CAPABILITIES',
+                  style: AppStyles.styleRegular43(context),
+                ),
+                const SizedBox(
+                  height: 12,
+                ),
+                Text(
+                  'I am always looking to add more skills.Morbi egestas neque eu blandit fermentum. Nulla ac lobortis ligula. Pellentesque ac ex at purus faucibus tristique ut et dolor.',
+                  style: AppStyles.styleRegular16(context),
+                ),
+                const SizedBox(
+                  height: 24,
+                ),
+                FittedBox(
+                  child: Row(
+                      children: List.generate(items.length, (indext) {
+                    return Padding(
+                      padding: const EdgeInsets.only(right: 16),
+                      child: Skills(
+                        skillsModel: items[indext],
+                      ),
+                    );
+                  })),
+                ),
+              ],
+            ),
+          ),
+        ),
+        const SliverToBoxAdapter(
+          child: Divider(
+            height: 60,
+            color: Color(0xff484848),
+          ),
+        ),
+        SliverToBoxAdapter(
           key: getIt<ScrollService>().contactKey,
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16),
             child: Column(
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 const LetConnect(),
                 const SizedBox(

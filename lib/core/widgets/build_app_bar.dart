@@ -21,7 +21,7 @@ AppBar buildAppBar(BuildContext context) {
                   .scrollTo(getIt<ScrollService>().featuredProjectKey);
             },
             child: Text(
-              'Featured Projects',
+              'Projects',
               style: AppStyles.styleInterMedium16(context),
             ),
           ),
@@ -35,6 +35,19 @@ AppBar buildAppBar(BuildContext context) {
             },
             child: Text(
               'About',
+              style: AppStyles.styleInterMedium16(context),
+            ),
+          ),
+          const SizedBox(
+            width: 15,
+          ),
+          GestureDetector(
+            onTap: () {
+              getIt<ScrollService>()
+                  .scrollTo(getIt<ScrollService>().myCapabilitiesKey);
+            },
+            child: Text(
+              'Skills',
               style: AppStyles.styleInterMedium16(context),
             ),
           ),

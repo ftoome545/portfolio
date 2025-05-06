@@ -18,6 +18,10 @@ class Assets {
   /// assets/images/card_logo.png
   static const String imagesCardLogo = "assets/images/card_logo.png";
 
+  /// Assets for imagesDartIcon
+  /// assets/images/dart_icon.svg
+  static const String imagesDartIcon = "assets/images/dart_icon.svg";
+
   /// Assets for imagesDemoLinkIcon
   /// assets/images/demo_link_icon.svg
   static const String imagesDemoLinkIcon = "assets/images/demo_link_icon.svg";
@@ -25,6 +29,26 @@ class Assets {
   /// Assets for imagesFatimaLogo
   /// assets/images/FatimaLogo.jpeg
   static const String imagesFatimaLogo = "assets/images/FatimaLogo.jpeg";
+
+  /// Assets for imagesFigmaIcon
+  /// assets/images/figma_icon.svg
+  static const String imagesFigmaIcon = "assets/images/figma_icon.svg";
+
+  /// Assets for imagesFirebase
+  /// assets/images/Firebase.svg
+  static const String imagesFirebase = "assets/images/Firebase.svg";
+
+  /// Assets for imagesFirebaseIcon
+  /// assets/images/firebase_icon.svg
+  static const String imagesFirebaseIcon = "assets/images/firebase_icon.svg";
+
+  /// Assets for imagesFlutterIcon
+  /// assets/images/flutter_icon.svg
+  static const String imagesFlutterIcon = "assets/images/flutter_icon.svg";
+
+  /// Assets for imagesGitIcon
+  /// assets/images/git_icon.svg
+  static const String imagesGitIcon = "assets/images/git_icon.svg";
 
   /// Assets for imagesGithubIcon
   /// assets/images/github_icon.svg

@@ -9,28 +9,31 @@ class SocialContact extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      children: [
-        IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(Assets.imagesLinkedInIcon)),
-        const SizedBox(
-          width: 24,
-        ),
-        IconButton(
-            onPressed: () {}, icon: SvgPicture.asset(Assets.imagesGithubIcon)),
-        const SizedBox(
-          width: 24,
-        ),
-        IconButton(
-            onPressed: () {}, icon: SvgPicture.asset(Assets.imagesXIcon)),
-        const SizedBox(
-          width: 24,
-        ),
-        IconButton(
-            onPressed: () {},
-            icon: SvgPicture.asset(Assets.imagesInstagramIcon)),
-      ],
+    return FittedBox(
+      child: Row(
+        children: [
+          IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(Assets.imagesLinkedInIcon)),
+          const SizedBox(
+            width: 24,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(Assets.imagesGithubIcon)),
+          const SizedBox(
+            width: 24,
+          ),
+          IconButton(
+              onPressed: () {}, icon: SvgPicture.asset(Assets.imagesXIcon)),
+          const SizedBox(
+            width: 24,
+          ),
+          IconButton(
+              onPressed: () {},
+              icon: SvgPicture.asset(Assets.imagesInstagramIcon)),
+        ],
+      ),
     );
   }
 }

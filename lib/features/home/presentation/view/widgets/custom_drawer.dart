@@ -34,7 +34,7 @@ class CustomDrawer extends StatelessWidget {
                               getIt<ScrollService>().featuredProjectKey);
                         },
                         child: Text(
-                          'Featured Projects',
+                          'Projects',
                           style: AppStyles.styleInterMedium16(context),
                         ),
                       ),
@@ -48,6 +48,19 @@ class CustomDrawer extends StatelessWidget {
                         },
                         child: Text(
                           'About',
+                          style: AppStyles.styleInterMedium16(context),
+                        ),
+                      ),
+                      const SizedBox(
+                        height: 24,
+                      ),
+                      GestureDetector(
+                        onTap: () {
+                          getIt<ScrollService>().scrollTo(
+                              getIt<ScrollService>().myCapabilitiesKey);
+                        },
+                        child: Text(
+                          'Skills',
                           style: AppStyles.styleInterMedium16(context),
                         ),
                       ),

@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/services/get_it_service.dart';
+import 'package:practice_1/core/services/scroll_service.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
@@ -44,7 +46,13 @@ class BriefInfo extends StatelessWidget {
                     const SizedBox(
                       height: 40,
                     ),
-                    const ContactMe()
+                    ContactMe(
+                      onPressed: () {
+                        getIt<ScrollService>()
+                            .scrollTo(getIt<ScrollService>().contactKey);
+                      },
+                      title: 'CONTACT ME',
+                    ),
                   ],
                 ),
               ),
