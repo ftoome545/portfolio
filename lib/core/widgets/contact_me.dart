@@ -38,11 +38,15 @@ class _ContactMeState extends State<ContactMe> {
           TextButton(
             style: TextButton.styleFrom(
               backgroundColor: const Color(0xFFD3E97A),
+              padding: EdgeInsets.zero,
             ),
             onPressed: handlPress,
-            child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+            child: Container(
+              height: 60,
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              alignment: Alignment.center,
               child: Row(
+                mainAxisSize: MainAxisSize.min,
                 children: [
                   Text(
                     widget.title,
@@ -51,7 +55,7 @@ class _ContactMeState extends State<ContactMe> {
                         : AppStyles.styleBold16(context),
                   ),
                   const SizedBox(
-                    width: 16,
+                    width: 24,
                   ),
                   isClicked
                       ? Container(
