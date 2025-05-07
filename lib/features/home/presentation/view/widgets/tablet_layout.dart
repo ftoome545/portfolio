@@ -106,6 +106,7 @@ class TabletLayout extends StatelessWidget {
                       ContactMe(
                         onPressed: () {},
                         title: 'DOWNLOAD RESUME',
+                        icon: Assets.imagesDownloadIcon,
                       ),
                     ],
                   ),

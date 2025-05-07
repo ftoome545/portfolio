@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/featured_projects.dart';
@@ -41,9 +42,9 @@ class AboutMe extends StatelessWidget {
         //   ),
         // ),
         ContactMe(
-          onPressed: () {},
-          title: 'DOWNLOAD RESUME',
-        ),
+            onPressed: () {},
+            title: 'DOWNLOAD RESUME',
+            icon: Assets.imagesDownloadIcon),
       ],
     );
   }

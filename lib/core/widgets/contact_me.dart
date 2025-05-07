@@ -4,16 +4,31 @@ import 'package:practice_1/core/utils/app_colors.dart';
 import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 
-class ContactMe extends StatelessWidget {
+class ContactMe extends StatefulWidget {
   const ContactMe({
     super.key,
     required this.title,
     required this.onPressed,
-    this.isClicked = false,
+    required this.icon,
   });
   final String title;
   final VoidCallback onPressed;
-  final bool isClicked;
+  final String icon;
+
+  @override
+  State<ContactMe> createState() => _ContactMeState();
+}
+
+class _ContactMeState extends State<ContactMe> {
+  bool isClicked = false;
+
+  void handlPress() {
+    setState(() {
+      isClicked = true;
+    });
+
+    Future.delayed(const Duration(milliseconds: 500), widget.onPressed);
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -24,13 +39,13 @@ class ContactMe extends StatelessWidget {
             style: TextButton.styleFrom(
               backgroundColor: const Color(0xFFD3E97A),
             ),
-            onPressed: onPressed,
+            onPressed: handlPress,
             child: Padding(
-              padding: const EdgeInsets.symmetric(horizontal: 24, vertical: 19),
+              padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
               child: Row(
                 children: [
                   Text(
-                    title,
+                    widget.title,
                     style: MediaQuery.sizeOf(context).width < 800
                         ? AppStyles.styleBold14(context)
                         : AppStyles.styleBold16(context),
@@ -38,11 +53,22 @@ class ContactMe extends StatelessWidget {
                   const SizedBox(
                     width: 16,
                   ),
-                  const Icon(
-                    Icons.circle,
-                    color: AppColors.primaryColor,
-                    size: 10,
-                  )
+                  isClicked
+                      ? Container(
+                          decoration: const ShapeDecoration(
+                              color: AppColors.primaryColor,
+                              shape: CircleBorder()),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                                horizontal: 10, vertical: 10),
+                            child: SvgPicture.asset(widget.icon),
+                          ),
+                        )
+                      : const Icon(
+                          Icons.circle,
+                          color: AppColors.primaryColor,
+                          size: 10,
+                        ),
                 ],
               ),
             ),

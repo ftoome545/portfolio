@@ -26,6 +26,10 @@ class Assets {
   /// assets/images/demo_link_icon.svg
   static const String imagesDemoLinkIcon = "assets/images/demo_link_icon.svg";
 
+  /// Assets for imagesDownloadIcon
+  /// assets/images/download_icon.svg
+  static const String imagesDownloadIcon = "assets/images/download_icon.svg";
+
   /// Assets for imagesFatimaLogo
   /// assets/images/FatimaLogo.jpeg
   static const String imagesFatimaLogo = "assets/images/FatimaLogo.jpeg";
@@ -105,6 +109,10 @@ class Assets {
   /// Assets for imagesTravelLogo
   /// assets/images/travel_logo.png
   static const String imagesTravelLogo = "assets/images/travel_logo.png";
+
+  /// Assets for imagesWhiteArrowIcon
+  /// assets/images/white_arrow_icon.svg
+  static const String imagesWhiteArrowIcon = "assets/images/white_arrow_icon.svg";
 
   /// Assets for imagesXIcon
   /// assets/images/x_icon.svg

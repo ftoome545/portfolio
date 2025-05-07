@@ -69,6 +69,7 @@ class MobileLayout extends StatelessWidget {
                             .scrollTo(getIt<ScrollService>().contactKey);
                       },
                       title: 'CONTACT ME',
+                      icon: Assets.imagesWhiteArrowIcon,
                     ),
                     const SizedBox(
                       height: 40,

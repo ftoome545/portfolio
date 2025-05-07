@@ -112,6 +112,7 @@ class _DesktopLayoutState extends State<DesktopLayout> {
                       ContactMe(
                         onPressed: () {},
                         title: 'DOWNLOAD RESUME',
+                        icon: Assets.imagesDownloadIcon,
                       ),
                     ],
                   ),

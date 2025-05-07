@@ -1,13 +1,19 @@
 import 'package:flutter/material.dart';
 import 'package:practice_1/core/services/get_it_service.dart';
 import 'package:practice_1/core/services/scroll_service.dart';
+import 'package:practice_1/core/utils/app_images.dart';
 import 'package:practice_1/core/utils/app_styles.dart';
 import 'package:practice_1/core/widgets/contact_me.dart';
 import 'package:practice_1/features/home/presentation/view/widgets/developer_image.dart';
 
-class BriefInfo extends StatelessWidget {
+class BriefInfo extends StatefulWidget {
   const BriefInfo({super.key});
 
+  @override
+  State<BriefInfo> createState() => _BriefInfoState();
+}
+
+class _BriefInfoState extends State<BriefInfo> {
   @override
   Widget build(BuildContext context) {
     return Column(
@@ -52,6 +58,7 @@ class BriefInfo extends StatelessWidget {
                             .scrollTo(getIt<ScrollService>().contactKey);
                       },
                       title: 'CONTACT ME',
+                      icon: Assets.imagesWhiteArrowIcon,
                     ),
                   ],
                 ),
